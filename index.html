@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html style="background:#111; color:#fff; font-family:sans-serif; display:flex; height:100vh; align-items:center; justify-content:center; margin:0;">
-<div style="display:flex; gap:8px; width:85%; max-width:650px;">
-  <input id="preview" type="text" readonly style="flex:1; padding:12px; background:#222; color:#0f0; border:1px solid #444; border-radius:6px; font-family:monospace;">
-  <button id="btn" onclick="copyScript()" style="padding:12px 20px; cursor:pointer; background:#007bff; color:#fff; border:none; border-radius:6px; font-weight:bold;">Copy</button>
-</div>
-
-<textarea id="raw" style="display:none;">/* ============================================================
+/* ============================================================
    NEON TOWER DEFENSE  v2  —  paste into the browser console
    Lobby • Solo / Duos / Trios • saved profile • co-op over a public relay
    ============================================================ */
@@ -1351,16 +1344,3 @@ setInterval(()=>{if(alive&&scr!=="title")persist(false)},10000);
 })();
 
 
-</textarea>
-
-<script>
-  const scriptText = document.getElementById('raw').value;
-  document.getElementById('preview').value = scriptText;
-  function copyScript() {
-    navigator.clipboard.writeText(scriptText);
-    const btn = document.getElementById('btn');
-    btn.innerText = 'Copied!';
-    setTimeout(() => btn.innerText = 'Copy', 2000);
-  }
-</script>
-</html>
